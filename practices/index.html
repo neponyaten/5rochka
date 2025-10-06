@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пятёрочка - Акции</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <style>
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .promo-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 2px solid #e30613;
+        }
+        
+        .promo-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .promo-header {
+            background: linear-gradient(135deg, #e30613 0%, #c10510 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .promo-content {
+            padding: 25px;
+        }
+        
+        .promo-title {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+            color: #e30613;
+            font-weight: 700;
+        }
+        
+        .promo-period {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .promo-description {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .discount-badge {
+            background: #e30613;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-block;
+        }
+        
+        .conditions {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Троечка - Акции</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="../news/index.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Акции</a></li>
+                <li class="nav-item"><a class="nav-link" href="../goods/index.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contacts/index.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section class="promo-section">
+                <h2 class="section-title">Текущие акции и спецпредложения</h2>
+                <p style="text-align: center; margin-bottom: 30px; font-size: 18px; color: #666;">
+                    Экономьте с выгодой! Специальные предложения действуют до конца пары.
+                </p>
+                
+                <div class="promo-grid">
+                    <article class="promo-card">
+                        <div class="promo-header">
+                            <span class="discount-badge">-25%</span>
+                        </div>
+                        <div class="promo-content">
+                            <h3 class="promo-title">Скидка на молочные продукты</h3>
+                            <span class="promo-period">Действует до: 06.10.2025</span>
+                            <p class="promo-description">Специальная скидка 25% на весь ассортимент молочной продукции от бренда "Просто Молоко".</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="promo-card">
+                        <div class="promo-header">
+                            <span class="discount-badge">2=1</span>
+                        </div>
+                        <div class="promo-content">
+                            <h3 class="promo-title">Второй товар в подарок</h3>
+                            <span class="promo-period">Действует до: 06.10.2025</span>
+                            <p class="promo-description">При покупке любого кофе из серии "Премиум" получите второй такой же товар абсолютно бесплатно!</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

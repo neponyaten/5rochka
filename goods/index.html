@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Троечка - Товары</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <style>
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            background: #f8f9fa;
+            border: 2px solid #e30613;
+            color: #e30613;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: #e30613;
+            color: white;
+        }
+        
+        .products-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .product-badge {
+            background: #e30613;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-weight: 600;
+        }
+        
+        .product-card {
+            position: relative;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin: 10px 0;
+        }
+        
+        .add-to-cart {
+            background: #e30613;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .add-to-cart:hover {
+            background: #c10510;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Троечка - Товары</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="../news/index.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="../practices/index.html">Акции</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contacts/index.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section class="products-section">
+                <div class="products-header">
+                    <h2 class="section-title">Каталог товаров</h2>
+                    <p>Широкий ассортимент качественных продуктов по доступным ценам</p>
+                </div>
+                
+                <div class="category-filter">
+                    <button class="category-btn active" data-category="all">Все товары</button>
+                    <button class="category-btn" data-category="dairy">Молочные продукты</button>
+                    <button class="category-btn" data-category="meat">Мясо и колбасы</button>
+                    <button class="category-btn" data-category="drinks">Напитки</button>
+                </div>
+                
+                <div class="products-grid">
+                    <!-- Молочные продукты -->
+                    <article class="product-card" data-category="dairy">
+                        <div class="product-badge">Акция</div>
+                        <img class="product-image" src="https://cm.samokat.ru/processed/l/product_card/7de97f6f-53bb-4e00-93db-6f0ad6a4c2c6.jpg" alt="Молоко Простоквашино">
+                        <h3 class="product-name">Молоко "Простоквашино" 3.2%</h3>
+                        <div class="rating">★★★★☆</div>
+                        <p class="product-price">89 ₽</p>
+                        <p class="product-desc">Пастеризованное, 950 мл</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                    <article class="product-card" data-category="dairy">
+                        <img class="product-image" src="https://cm.samokat.ru/processed/l/product_card/4c68c710-c82c-4c66-bf4c-00cbdb8e0706.jpg" alt="Йогурт Чудо">
+                        <h3 class="product-name">Йогурт "Чудо" натуральный</h3>
+                        <div class="rating">★★★★★</div>
+                        <p class="product-price">65 ₽</p>
+                        <p class="product-desc">Натуральный, 125 г</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                    <article class="product-card" data-category="dairy">
+                        <img class="product-image" src="https://cm.samokat.ru/processed/l/product_card/d599f2e1-6938-408d-a417-a3d016a2842b.jpg" alt="Сыр Российский">
+                        <h3 class="product-name">Сыр "Российский"</h3>
+                        <div class="rating">★★★★☆</div>
+                        <p class="product-price">320 ₽</p>
+                        <p class="product-desc">50%, 200 г</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                    <!-- Мясо и колбасы -->
+                    <article class="product-card" data-category="meat">
+                        <div class="product-badge">Хит</div>
+                        <img class="product-image" src="https://cm.samokat.ru/processed/l/product_card/1a0dc8e2-89b5-44ed-9091-10a3d4ba2705.jpg" alt="Курица охлажденная">
+                        <h3 class="product-name">Курица охлажденная "Петеленка"</h3>
+                        <div class="rating">★★★★☆</div>
+                        <p class="product-price">250 ₽/кг</p>
+                        <p class="product-desc">Свежая, охлажденная</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                    <article class="product-card" data-category="meat">
+                        <img class="product-image" src="https://damcdn.samokat.ru/dam-storage-ext-env-prod/2025/09/f1ea8b76-f4f8-4856-a8ec-58a55cf7f3e6" alt="Колбаса Докторская">
+                        <h3 class="product-name">Колбаса "Докторская"</h3>
+                        <div class="rating">★★★★☆</div>
+                        <p class="product-price">480 ₽/кг</p>
+                        <p class="product-desc">Вареная, высший сорт</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                    <article class="product-card" data-category="drinks">
+                        <img class="product-image" src="https://damcdn.samokat.ru/dam-storage-ext-env-prod/2025/09/440c6e68-4bb6-44c1-89c7-8e761bc3cc5d" alt="Lit Energy">
+                        <h3 class="product-name">Энергетический напиток "Lit Energy"</h3>
+                        <div class="rating">★★★★☆</div>
+                        <p class="product-price">99р</p>
+                        <p class="product-desc">Со вкусом черники</p>
+                        <button class="add-to-cart">В корзину</button>
+                    </article>
+                    
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        // Фильтрация товаров по категориям
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Убираем активный класс у всех кнопок
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавляем активный класс текущей кнопке
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Показываем/скрываем товары в зависимости от категории
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Обработка добавления в корзину
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.parentElement.querySelector('.product-name').textContent;
+                    const productPrice = this.parentElement.querySelector('.product-price').textContent;
+                    
+                    alert(`Товар "${productName}" добавлен в корзину!\nЦена: ${productPrice}`);
+                    
+                    // Анимация кнопки
+                    this.textContent = 'Добавлено!';
+                    this.style.background = '#28a745';
+                    
+                    setTimeout(() => {
+                        this.textContent = 'В корзину';
+                        this.style.background = '#e30613';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
